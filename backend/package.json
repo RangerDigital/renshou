@@ -1,0 +1,32 @@
+{
+  "name": "renshou",
+  "version": "1.0.0",
+  "description": "👩🏻‍🌾 Monitoring system aggregating data on hydrological and air quality hazards.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon start.js | pino-pretty",
+    "lint": "eslint ./ || exit 0",
+    "test": "jest --runInBand",
+    "test:watch": "jest --runInBand --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.6.0",
+    "fastify": "^3.17.0",
+    "fastify-plugin": "^3.0.0",
+    "fastify-swagger": "^4.7.0",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.13",
+    "nodemailer": "^6.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "jest": "^27.0.4",
+    "mongodb-memory-server": "^6.9.6",
+    "nodemon": "^2.0.7",
+    "pino-pretty": "^4.8.0",
+    "supertest": "^6.1.3"
+  }
+}
