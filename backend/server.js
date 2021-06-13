@@ -32,9 +32,11 @@ app.register(require('fastify-swagger'), {
   },
 });
 
+const stations = require('./routes/stations');
 const users = require('./routes/users');
 const auth = require('./routes/auth');
 
+app.register(stations, { prefix: '/stations' });
 app.register(users, { prefix: '/users' });
 app.register(auth, { prefix: '/auth' });
 

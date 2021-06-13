@@ -12,6 +12,7 @@ const schema = mongoose.Schema({
     magicToken: String,
     createdAt: Date,
   },
+  admin: { type: Boolean },
 });
 
 module.exports = mongoose.model('user', schema);
