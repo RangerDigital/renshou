@@ -64,6 +64,7 @@ async function routes(router) {
     }
   );
 
+  // Measurements
   router.get(
     '/:stationId/measurements',
     {
@@ -98,6 +99,26 @@ async function routes(router) {
       const measurement = await StationService.saveMeasurement(stationId, password, values);
 
       return res.send(measurement);
+    }
+  );
+
+  // Alerts
+  router.post(
+    '/:stationId/alerts',
+    {
+      schema: {
+        summary: 'Create station alert',
+        tags: ['Stations'],
+        security: [{ BearerAuth: [] }],
+      },
+    },
+    async (req, res) => {
+      const { stationId } = req.params;
+      const { password, message } = req.body;
+
+      const alert = await StationService.saveAlert(stationId, password, message);
+
+      return res.send(alert);
     }
   );
 }
