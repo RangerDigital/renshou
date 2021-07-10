@@ -1,4 +1,5 @@
 const stations = require('../models/stations');
+const measurements = require('../models/measurements');
 
 class StationService {
   async get(id) {
@@ -14,6 +15,23 @@ class StationService {
     station.save();
 
     return station;
+  }
+
+  async getMeasurements(stationId) {
+    return await measurements.find({ station: stationId });
+  }
+
+  async saveMeasurement(stationId, password, values) {
+    let station = await measurements.find({ station: stationId, password: password });
+
+    if (!station) {
+      return;
+    }
+
+    let measurement = new measurements({ station: stationId, values: values });
+    measurement.save();
+
+    return measurement;
   }
 }
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const schema = mongoose.Schema(
   {
-    values: { type: Object },
+    values: { type: Array },
     station: mongoose.Types.ObjectId,
   },
   { timestamps: true }
