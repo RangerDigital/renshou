@@ -43,9 +43,9 @@ This will spin up all the necessary containers and expose Renshou service **API*
   node install
   ```
 
-- Also, Fill out .env file.
+- Spin up **MongoDB**.
 
-- After that spin up **MongoDB**.
+- Fill out .env file.
 
 - Run `start.js`, entry point for Fastify app.
 
