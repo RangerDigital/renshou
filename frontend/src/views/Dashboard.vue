@@ -4,7 +4,7 @@
       <AppNavigation />
     </section>
 
-    <Map class="absolute z-0 w-full h-full" />
+    <Map class="absolute z-0 w-full h-full" :stations="stations" />
   </div>
 </template>
 
@@ -20,13 +20,23 @@
     },
     data() {
       return {
-        logged: false,
+        stations: [],
       };
     },
+    methods: {
+      getStations() {
+        this.axios
+          .get('/api/stations')
+          .then((payload) => {
+            this.stations = payload.data;
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      },
+    },
     mounted() {
-      if (localStorage.token) {
-        this.logged = true;
-      }
+      this.getStations();
     },
   };
 </script>

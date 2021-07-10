@@ -17,10 +17,7 @@
           />
         </div>
 
-        <button
-          class="px-8 py-3 mx-5 my-5 text-sm text-white rounded lg:my-0 bg-primary disabled:bg-gray disabled:text-gray-light focus:outline-none"
-          @click="addUser()"
-          :disabled="!email.length"
+        <button class="px-8 py-3 mx-5 my-5 text-sm text-white rounded lg:my-0 bg-primary disabled:bg-gray disabled:text-gray-light focus:outline-none" @click="addUser()"
           >Add User</button
         >
       </div>
@@ -47,9 +44,6 @@
     },
     methods: {
       addUser() {
-        if (!this.email) {
-          return;
-        }
         this.axios
           .post('/api/users/', {
             email: this.email,
