@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col items-center justify-center w-full h-full">
     <section class="w-full p-4 bg-white shadow-lg lg:w-96 lg:p-8 lg:rounded-xl ">
-      <h1 class="my-1 text-lg font-medium text-gray font-heading">Station - {{ station.name }}</h1>
-      <p class="my-2 text-sm text-gray-light">Stations Information</p>
+      <h1 class="my-1 text-lg font-medium text-gray font-heading">Station Details - {{ station.name }}</h1>
+      <p class="my-2 text-sm text-gray-light">Station Information</p>
 
       <div class="flex flex-col items-center justify-between w-full mt-8 ">
         <div class="w-full my-4">
@@ -25,12 +25,11 @@
       </div>
 
       <div class="my-9">
-        <p class="text-xs text-gray-light">Measurements</p>
-        <div class="w-full h-px my-3 rounded-full bg-gray-lighter"></div>
+        <p class="text-sm text-gray-light">Measurements</p>
 
         <div class="flex flex-col justify-between w-full my-6 cursor-pointer" v-for="(item, index) in measurements" :key="index">
-          <p class="text-sm text-gray"> {{ item.createdAt }}</p>
-          <p class="text-sm text-gray" v-for="(value, index) in item.values" :key="index">{{ value.name }} = {{ value.value }} {{ value.unit }}</p>
+          <p class="text-sm text-gray">- {{ item.createdAt }}</p>
+          <p class="text-sm text-gray" v-for="(value, index) in item.values" :key="index"> : {{ value.name }} = {{ value.value }} {{ value.unit }}</p>
         </div>
       </div>
     </section>

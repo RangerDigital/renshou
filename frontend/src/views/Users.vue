@@ -2,11 +2,11 @@
   <div class="flex flex-col items-center justify-center w-full h-full">
     <section class="w-full p-4 bg-white shadow-lg lg:w-auto lg:p-8 lg:rounded-xl">
       <h1 class="my-1 text-lg font-medium text-gray font-heading">Manage Users</h1>
-      <p class="my-2 text-sm text-gray-light"> Enter the user's email.</p>
+      <p class="my-2 text-sm text-gray-light"> Create or view users.</p>
 
       <div class="flex flex-col items-center justify-between w-full mt-8 ">
         <div class="w-full my-4">
-          <p class="my-2 text-sm text-gray-light">Email</p>
+          <p class="my-2 text-sm text-gray-light">User Email</p>
 
           <input
             v-model="email"
@@ -22,8 +22,7 @@
         >
       </div>
       <div class="my-9">
-        <p class="text-xs text-gray-light">Current Users</p>
-        <div class="w-full h-px my-3 rounded-full bg-gray-lighter"></div>
+        <p class="text-sm text-gray-light">Users List</p>
 
         <div class="flex flex-row justify-between w-full my-6" v-for="(item, index) in users" :key="index">
           <p class="text-sm text-gray">{{ item.email }}</p>
