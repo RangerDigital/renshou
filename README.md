@@ -15,25 +15,11 @@
 
 **It's easy to get started with developing Renshou!**
 
-This project uses **Docker** as a development and production deployment tool, so **you need It** first!
-
 <br>
 
 ### Backend
 
 > 💡 Execute every command in the `./backend` directory!
-
-**If you only want to run It**, you need to:
-
-- Spin up the whole stack as containers, simply type:
-
-  ```bash
-  docker-compose up -d
-  ```
-
-This will spin up all the necessary containers and expose Renshou service **API** at `http://127.0.0.1:3000`.
-
-<br>
 
 **If you want to make changes** to the **Fastify** app, you need to:
 
@@ -79,7 +65,6 @@ This will create a development web server at `http://127.0.0.1:8080`.
 And It's a lot simpler!
 
 <br>
-
 
 <br>
 
