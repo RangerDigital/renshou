@@ -2,6 +2,7 @@
   <div class="flex flex-col items-center justify-center w-full h-full">
     <section class="w-full p-4 bg-white shadow-lg lg:w-96 lg:p-8 lg:rounded-xl ">
       <h1 class="my-1 text-lg font-medium text-gray font-heading">Station Details - {{ station.name }}</h1>
+
       <p class="my-2 text-sm text-gray-light">Station Information</p>
 
       <div class="flex flex-col items-center justify-between w-full mt-8 ">

@@ -5,6 +5,7 @@ class AlertService {
   async getAll() {
     let alertsArray = [];
 
+    // Populate stations
     for (let alert of await alerts.find()) {
       alert = alert.toObject();
       alert.station = await stations.findById(alert.station);
