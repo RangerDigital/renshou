@@ -2,7 +2,7 @@
   <div class="flex flex-col items-center justify-center w-full h-full">
     <section class="w-full p-4 bg-white shadow-lg lg:w-auto lg:p-8 lg:rounded-xl">
       <h1 class="my-1 text-lg font-medium text-gray font-heading">Manage Stations</h1>
-      <p class="my-2 text-sm text-gray-light"> Enter stations information.</p>
+      <p class="my-2 text-sm text-gray-light">Create a new measurement station.</p>
 
       <div class="flex flex-col items-center justify-between w-full mt-8 ">
         <div class="w-full my-4">
@@ -30,7 +30,7 @@
 
           <input
             v-model="station.location[1]"
-            placeholder="... StationLongitude"
+            placeholder="... Station Longitude"
             class="block w-full px-3 py-3 text-sm border-transparent rounded bg-background text-gray placeholder-gray-light lg:w-80 focus:outline-none "
           />
         </div>
@@ -50,7 +50,7 @@
         >
       </div>
       <div class="my-9">
-        <p class="text-xs text-gray-light">Stations</p>
+        <p class="text-sm text-gray-light">Stations List</p>
         <div class="w-full h-px my-3 rounded-full bg-gray-lighter"></div>
 
         <div class="flex flex-row justify-between w-full my-6 cursor-pointer" v-for="(item, index) in stations" :key="index" @click="$router.push('/stations/' + item._id)">
