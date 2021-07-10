@@ -55,7 +55,6 @@
 
         <div class="flex flex-row justify-between w-full my-6 cursor-pointer" v-for="(item, index) in stations" :key="index" @click="$router.push('/stations/' + item._id)">
           <p class="text-sm text-gray">{{ item.name }}</p>
-          <p class="text-sm text-gray">{{ item.location }}</p>
         </div>
       </div>
     </section>

@@ -15,7 +15,8 @@
         <div class="w-full my-4">
           <p class="my-2 text-sm text-gray-light">Location</p>
 
-          <p class="my-2 text-gray">{{ station.location }}</p>
+          <p class="my-1 text-gray">Latitude: {{ station.location[0] }}</p>
+          <p class="my-1 text-gray">Longitude: {{ station.location[1] }}</p>
         </div>
 
         <div class="w-full my-4">
@@ -42,7 +43,7 @@
     name: 'Station',
     data() {
       return {
-        station: {},
+        station: { location: ['', ''] },
         measurements: [],
       };
     },

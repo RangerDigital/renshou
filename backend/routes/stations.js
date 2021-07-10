@@ -7,7 +7,7 @@ async function routes(router) {
     '/',
     {
       schema: {
-        summary: 'Get all stations',
+        summary: 'Get all stations.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
       },
@@ -23,7 +23,7 @@ async function routes(router) {
     '/:stationId',
     {
       schema: {
-        summary: 'Get station',
+        summary: 'Get station by ID.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
       },
@@ -41,7 +41,7 @@ async function routes(router) {
     '/',
     {
       schema: {
-        summary: 'Create station',
+        summary: 'Create a new station.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
 
@@ -69,7 +69,7 @@ async function routes(router) {
     '/:stationId/measurements',
     {
       schema: {
-        summary: 'Get station measurements',
+        summary: 'Get all station measurements.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
       },
@@ -87,7 +87,7 @@ async function routes(router) {
     '/:stationId/measurements',
     {
       schema: {
-        summary: 'Create station measurement',
+        summary: 'Create a new station measurement.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
       },
@@ -107,7 +107,7 @@ async function routes(router) {
     '/:stationId/alerts',
     {
       schema: {
-        summary: 'Create station alert',
+        summary: 'Create a new station alert.',
         tags: ['Stations'],
         security: [{ BearerAuth: [] }],
       },

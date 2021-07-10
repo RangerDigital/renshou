@@ -7,7 +7,7 @@ async function routes(router) {
     '/',
     {
       schema: {
-        summary: 'Get all alerts',
+        summary: 'Get all alerts.',
         tags: ['Alerts'],
         security: [{ BearerAuth: [] }],
       },

@@ -7,8 +7,8 @@
       <div class="my-9">
         <p class="text-sm text-gray-light">Active Alerts</p>
 
-        <div class="flex flex-col justify-between w-full cursor-pointer my-6c" v-for="(item, index) in alerts" :key="index" @click="$router.push('/stations/' + item.station._id)">
-          <p class="my-1 text-sm text-gray">{{ item.createdAt }} - Station: {{ item.station.name }}</p>
+        <div class="flex flex-col justify-between w-full my-6 cursor-pointer" v-for="(item, index) in alerts" :key="index" @click="$router.push('/stations/' + item.station._id)">
+          <p class="my-1 text-sm text-gray">{{ item.createdAt }} - {{ item.station.name }}</p>
 
           <p class="my-1 text-gray">{{ item.message }}</p>
         </div>
