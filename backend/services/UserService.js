@@ -5,6 +5,21 @@ class UserService {
     return await users.findById(id);
   }
 
+  async getAll() {
+    return await users.find();
+  }
+
+  async create(email) {
+    let user = await users.findOne({ email: email });
+
+    if (!user) {
+      user = new users({ email: email });
+      user.save();
+    }
+
+    return user;
+  }
+
   async updateEmail(id, email) {
     if (users.findOne({ email: email })) {
       return { success: false };

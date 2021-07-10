@@ -18,6 +18,21 @@ const routes = [
     name: 'Dashboard',
     component: () => import(/* webpackChunkName: "dashboard" */ '../views/Dashboard.vue'),
   },
+  {
+    path: '/users',
+    name: 'Users',
+    component: () => import(/* webpackChunkName: "users" */ '../views/Users.vue'),
+  },
+  {
+    path: '/alerts',
+    name: 'Alerts',
+    component: () => import(/* webpackChunkName: "alerts" */ '../views/Alerts.vue'),
+  },
+  {
+    path: '/stations',
+    name: 'Stations',
+    component: () => import(/* webpackChunkName: "stations" */ '../views/Stations.vue'),
+  },
 ];
 
 const router = createRouter({

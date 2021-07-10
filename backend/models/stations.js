@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
   name: String,
-  key: String,
+  password: String,
   location: {
     type: [Number],
   },
