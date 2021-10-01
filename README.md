@@ -66,8 +66,6 @@ And It's a lot simpler!
 
 <br>
 
-<br>
-
 ## 📃 License
 
 This project is licensed under [GPL-3.0](https://choosealicense.com/licenses/gpl-3.0/) .
