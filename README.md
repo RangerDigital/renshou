@@ -13,8 +13,6 @@
 
 ## 💻 Running Locally
 
-**It's easy to get started with developing Renshou!**
-
 <br>
 
 ### Backend
