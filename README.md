@@ -21,7 +21,7 @@
 
 **If you want to make changes** to the **Fastify** app, you need to:
 
-- Install **Node.js**, then projects requirements.
+- Install **Node.js** on pc, then projects requirements.
 
   ```bash
   node install
